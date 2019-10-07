@@ -277,6 +277,7 @@ SELECT 'hello' IN t1
 ----
 0
 
+skipif postgresql # can't compare string and integer
 query I nosort label-15
 SELECT 'hello' IN (SELECT * FROM t1)
 ----
@@ -288,6 +289,7 @@ SELECT 'hello' NOT IN t1
 ----
 1
 
+skipif postgresql # can't compare bitstring and integer
 query I nosort label-16
 SELECT 'hello' NOT IN (SELECT * FROM t1)
 ----
@@ -311,6 +313,7 @@ SELECT x'303132' IN t1
 ----
 0
 
+skipif postgresql # can't compare bitstring and integer
 query I nosort label-17
 SELECT x'303132' IN (SELECT * FROM t1)
 ----
@@ -322,6 +325,7 @@ SELECT x'303132' NOT IN t1
 ----
 1
 
+skipif postgresql # can't compare bitstring and integer
 query I nosort label-18
 SELECT x'303132' NOT IN (SELECT * FROM t1)
 ----
