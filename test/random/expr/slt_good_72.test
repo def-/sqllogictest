@@ -61706,7 +61706,7 @@ skipif mysql # not compatible
 query I rowsort label-6616
 SELECT ALL + 56 / COALESCE ( + + ( MAX ( ALL + + NULLIF ( - ( 67 ), 19 ) ) ), 47 / - AVG ( ALL + 96 ) ) + + MIN ( DISTINCT - 46 ) + - 58 + ( + 10 ) * COUNT ( * ) * - - 50 * + COUNT ( * ) + + ( 37 + 44 ) * + 8 AS col2
 ----
-1044
+1043
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query I rowsort label-6617
@@ -93204,4 +93204,3 @@ query I rowsort label-9999
 SELECT + 70 / - COUNT ( * ) + 7 + 1 AS col0
 ----
 -62
-

@@ -30437,7 +30437,7 @@ skipif mysql # not compatible
 query I rowsort label-3355
 SELECT - - 69 / - COALESCE ( - 14, + 45 * 38 * ( + 88 ) + + - 23 * + + COALESCE ( - 98, 43 * 96, + 41 * AVG ( ALL - 88 / 49 ), - ( 79 ) + 73 ) ) + 88 * - 78 AS col2
 ----
--6860
+-6859
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-3356
@@ -90983,4 +90983,3 @@ SELECT ALL - 32, 27 AS col2
 ----
 -32
 27
-

@@ -51913,7 +51913,7 @@ skipif mysql # not compatible
 query I rowsort label-5539
 SELECT - ( + COALESCE ( + 12, 88, 24 / AVG ( + - 53 ) - - 51 ) ) / + 7 + 2 AS col1
 ----
-1
+0
 
 query I rowsort
 SELECT DISTINCT - 7 * - + 50 + - 68 * - 71 AS col0
@@ -93230,4 +93230,3 @@ query I rowsort label-9999
 SELECT DISTINCT ( - MIN ( DISTINCT + 49 ) )
 ----
 -49
-

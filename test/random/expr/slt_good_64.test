@@ -14862,7 +14862,7 @@ skipif mysql # not compatible
 query I rowsort label-1591
 SELECT COALESCE ( + + 56, - AVG ( 44 ) ) / 79 * - ( - + COUNT ( * ) ) + - 22 + + 74 + COUNT ( * ) * + 15 * 50
 ----
-802
+803
 
 query I rowsort
 SELECT DISTINCT 4 * - 28 AS col2
@@ -93534,4 +93534,3 @@ query I rowsort
 SELECT 40 * 57
 ----
 2280
-

@@ -14722,7 +14722,7 @@ skipif mysql # not compatible
 query I rowsort label-1598
 SELECT ALL 20 * 12 / - + COALESCE ( - - 61, - + 95 * + AVG ( ( 61 ) ), - 55 )
 ----
--3
+-4
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-1599
@@ -92631,4 +92631,3 @@ SELECT ALL - 34 AS col1, 31
 ----
 -34
 31
-

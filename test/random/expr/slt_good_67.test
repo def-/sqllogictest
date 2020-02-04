@@ -9398,7 +9398,7 @@ skipif mysql # not compatible
 query I rowsort label-1002
 SELECT ALL + - 48 / COALESCE ( SUM ( ALL + - 27 ), + - 13, CASE 32 WHEN + COUNT ( * ) THEN NULL WHEN COUNT ( * ) THEN NULL WHEN + 47 THEN - 81 - - + 54 * + - AVG ( ALL + + 84 ) ELSE NULL END ) - - COUNT ( * ) - MIN ( ALL - + 83 ) + - 95
 ----
--10
+-9
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-1003
@@ -93486,4 +93486,3 @@ SELECT - - 36, + 92 AS col2
 ----
 36
 92
-

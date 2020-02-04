@@ -54174,7 +54174,7 @@ skipif mysql # not compatible
 query I rowsort label-5781
 SELECT ALL - + 21 + + + 10 + + - COUNT ( * ) - - + 85 + + 69 - + 68 / - COALESCE ( + 5, + AVG ( - 17 ) * - - ( + 45 ) * - 69, + 92 * + 93 ) AS col2
 ----
-155
+156
 
 query I rowsort
 SELECT 34 - - 68
@@ -93593,4 +93593,3 @@ SELECT + + COUNT ( * ) AS col2, CASE + 0 WHEN + 66 THEN NULL ELSE 37 END
 ----
 1
 37
-

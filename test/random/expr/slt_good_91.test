@@ -46186,7 +46186,7 @@ query II rowsort label-4928
 SELECT DISTINCT - 44 + + 43, ( 2 ) * 60 + + 46 * CASE 11 WHEN - COUNT ( * ) THEN + 11 - + MIN ( 24 ) - - - 65 * 34 / - + AVG ( DISTINCT - + 84 ) ELSE + 44 END / + + 70 + + 60 AS col0
 ----
 -1
-208
+209
 
 query I rowsort
 SELECT ALL - 54 * - 64 AS col1
@@ -93679,4 +93679,3 @@ query I rowsort
 SELECT DISTINCT 67 * 90
 ----
 6030
-

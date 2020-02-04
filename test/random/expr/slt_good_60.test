@@ -46546,7 +46546,7 @@ skipif mysql # not compatible
 query I rowsort label-5026
 SELECT ALL ( - COUNT ( * ) ) + + - COUNT ( * ) + 36 / COALESCE ( + CAST ( 76 AS INTEGER ), COUNT ( * ) - - + 21 * 44 * + COALESCE ( 61, - AVG ( 41 ) / - 34 ) + COALESCE ( 67, - ( 69 ), - 75 + 35 * + ( 78 * - 20 ) ) * + 36, 99 ) * + 65
 ----
--2
+24
 
 query I rowsort
 SELECT ALL 68 + + 10 col0
@@ -92689,4 +92689,3 @@ query I rowsort
 SELECT ALL - ( 72 ) * - - 0 + 82 - + 32
 ----
 50
-

@@ -80101,7 +80101,7 @@ skipif mysql # not compatible
 query I rowsort label-8637
 SELECT ALL COALESCE ( + + 99, + AVG ( - ( - 98 ) ) ) / SUM ( DISTINCT - ( - 28 ) )
 ----
-3
+4
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-8638
@@ -92806,4 +92806,3 @@ query I rowsort label-9999
 SELECT ALL NULLIF ( CAST ( NULL AS INTEGER ), COUNT ( * ) * - + 21 - 62 ) AS col0
 ----
 NULL
-

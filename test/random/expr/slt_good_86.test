@@ -4551,7 +4551,7 @@ skipif mysql # not compatible
 query I rowsort label-482
 SELECT - 42 + + 37 + 49 + + SUM ( + 57 ) / COALESCE ( + MAX ( DISTINCT + 36 ), - - 69, + COALESCE ( - 37, AVG ( ALL - 93 ), 73 + - + 66 ) )
 ----
-45
+46
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-483
@@ -93374,4 +93374,3 @@ query I rowsort label-9999
 SELECT AVG ( DISTINCT + 57 ) * CAST ( NULL AS INTEGER )
 ----
 NULL
-

@@ -22947,7 +22947,7 @@ skipif mysql # not compatible
 query I rowsort label-2466
 SELECT DISTINCT 52 * + NULLIF ( + 0, 86 + + 15 + - + CAST ( - 13 AS INTEGER ) * + + 66 ) - + - COALESCE ( + 55, - 53, + CASE - + 22 WHEN - ( NULLIF ( - 87, MAX ( ( 12 ) ) * + COUNT ( * ) + + 64 ) ) THEN + 8 WHEN 1 * - 57 / - - 92 THEN - + AVG ( + - 12 ) ELSE NULL END ) / 63 AS col1
 ----
-0
+1
 
 query II rowsort
 SELECT ALL + - 71 col1, 4 AS col0
@@ -61961,7 +61961,7 @@ skipif mysql # not compatible
 query I rowsort label-6625
 SELECT DISTINCT 7 + + + 10 + - 76 / COALESCE ( AVG ( + + CAST ( NULL AS INTEGER ) ), + - 29, - - 65 ) * - + 2 col1
 ----
-13
+12
 
 query I rowsort
 SELECT ALL 66 + - 67 AS col0
@@ -93371,4 +93371,3 @@ query I rowsort
 SELECT - 61 + 39
 ----
 -22
-

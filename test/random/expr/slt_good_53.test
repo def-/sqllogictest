@@ -64836,7 +64836,7 @@ skipif mysql # not compatible
 query I rowsort label-6991
 SELECT 66 + + COALESCE ( + 88, - COUNT ( * ), AVG ( DISTINCT - 36 ) ) / - ( 46 ) AS col1
 ----
-65
+64
 
 query I rowsort
 SELECT DISTINCT - 68 * - ( - 77 )
@@ -92797,4 +92797,3 @@ query I rowsort label-9999
 SELECT + - SUM ( DISTINCT 5 ) AS col2
 ----
 -5
-

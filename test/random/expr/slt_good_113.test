@@ -21293,7 +21293,7 @@ skipif mysql # not compatible
 query II rowsort label-2262
 SELECT + 45 / + + COALESCE ( - 70, - - ( - AVG ( + + 99 ) ) + SUM ( + 65 ) ) AS col2, 23
 ----
-0
+-1
 23
 
 onlyif mysql # CAST syntax: SIGNED type: DIV for integer division: 
@@ -63009,7 +63009,7 @@ skipif mysql # not compatible
 query I rowsort label-6697
 SELECT CASE 24 WHEN - - 89 + ( + ( + - 42 ) ) * + - 50 THEN NULL ELSE + 23 * - 45 END / COALESCE ( - 87, - 93 * - 8 * + + AVG ( 10 ) / 94 * - ( 21 ), + 79 ) * 95 * + 65
 ----
-67925
+72865
 
 onlyif mysql # DIV for integer division: 
 query I rowsort label-6698
@@ -72260,7 +72260,7 @@ skipif mysql # not compatible
 query I rowsort label-7694
 SELECT ALL + 50 * - - 52 * ( + 78 ) + - + COALESCE ( - + 32, + AVG ( DISTINCT - ( + 84 ) ) ) / + - 56
 ----
-202800
+202799
 
 query I rowsort
 SELECT DISTINCT + ( + + 10 ) AS col0
@@ -93712,4 +93712,3 @@ SELECT + 9 * - 85 + + 35 + - CASE + - 44 WHEN 59 THEN + 35 ELSE NULL END * - COA
 ----
 NULL
 1072
-

@@ -6869,7 +6869,7 @@ skipif mysql # not compatible
 query I rowsort label-720
 SELECT COALESCE ( + 89, - AVG ( ALL + ( + + 33 ) ) - + + 42 * - 67, COUNT ( * ) ) / + 23 + 5 AS col0
 ----
-8
+9
 
 query I rowsort
 SELECT ALL + 45 + 83
@@ -47494,7 +47494,7 @@ skipif mysql # not compatible
 query I rowsort label-5034
 SELECT - ( - 86 ) / COALESCE ( 89, ( + 13 ), + ( - + AVG ( ALL + 0 ) ) * - 77 )
 ----
-0
+1
 
 query II rowsort
 SELECT ALL + 73 AS col1, 80 AS col2
@@ -94106,4 +94106,3 @@ query I rowsort
 SELECT ALL + 98 * + - 18 AS col1
 ----
 -1764
-

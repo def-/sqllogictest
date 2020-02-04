@@ -85753,7 +85753,7 @@ skipif mysql # not compatible
 query I rowsort label-9244
 SELECT ALL 44 * COALESCE ( + 6, 5 + + - 61, - COALESCE ( - + 1, + 78 * - - 4 * - AVG ( NULLIF ( + 78, - - 85 * 17 + - + 64 ) ) - - MIN ( + + 36 ) ) ) / 68 * 18 - + - 84 * + - 92 * - 41 + - + 0
 ----
-316902
+316916
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query II rowsort label-9245
@@ -92886,4 +92886,3 @@ SELECT + + 67 AS col0, CAST ( + + 32 AS INTEGER ) col2
 ----
 67
 32
-

@@ -64613,7 +64613,7 @@ skipif mysql # not compatible
 query I rowsort label-6870
 SELECT ALL + - ( - ( + - COALESCE ( + - 44, - - 38 + AVG ( - - 80 ) + + - 39 + + CAST ( NULL AS INTEGER ) + - 65 + + 43 * - 62 / - + 56 / 21 * 86 ) ) ) / 29 + - - COUNT ( * ) - - 81 * - + MIN ( + 47 )
 ----
--3805
+-3804
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-6871
@@ -93781,4 +93781,3 @@ SELECT 56, + 6 col1
 ----
 56
 6
-

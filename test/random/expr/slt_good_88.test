@@ -6299,7 +6299,7 @@ skipif mysql # not compatible
 query I rowsort label-673
 SELECT DISTINCT - COALESCE ( 95, - 32 * - + AVG ( DISTINCT - - 71 ) ) / 25 AS col1
 ----
--3
+-4
 
 query I rowsort
 SELECT 75 - 78 AS col0
@@ -85097,7 +85097,7 @@ skipif mysql # not compatible
 query I rowsort label-9050
 SELECT ALL 16 - CASE - - 3 WHEN 75 THEN - AVG ( ALL + 2 ) * AVG ( ALL - 32 ) + + 48 ELSE + 73 * MIN ( 97 ) END / MAX ( - 99 )
 ----
-87
+88
 
 query I rowsort
 SELECT ALL - + ( 68 )
@@ -94008,4 +94008,3 @@ query I rowsort label-9999
 SELECT COUNT ( DISTINCT ( + + 85 ) )
 ----
 1
-

@@ -68650,7 +68650,7 @@ skipif mysql # not compatible
 query I rowsort label-7338
 SELECT DISTINCT + 33 + + MAX ( + 67 ) + + CASE + 52 WHEN - - ( - CASE COUNT ( * ) WHEN 77 THEN NULL WHEN 90 * - 7 THEN 37 WHEN - 25 THEN + 87 + - ( + - 78 ) ELSE - + 63 END ) THEN + ( - AVG ( 83 ) ) ELSE 25 + + 43 END / + 45 * COUNT ( * )
 ----
-101
+102
 
 query I rowsort
 SELECT DISTINCT + - 21 + + 83 + - - ( - 35 )
@@ -93418,4 +93418,3 @@ query I rowsort
 SELECT ALL + 25 * + 9 AS col1
 ----
 225
-

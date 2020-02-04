@@ -23251,7 +23251,7 @@ skipif mysql # not compatible
 query I rowsort label-2492
 SELECT COALESCE ( - 68, + + AVG ( - + 63 ) ) / + 85 AS col1
 ----
-0
+-1
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query III rowsort label-2493
@@ -93625,4 +93625,3 @@ SELECT ALL 81, + 39 * - - 66 - - - 66 + 0 + + + 98 * + 29 AS col2
 ----
 81
 5350
-

@@ -64903,7 +64903,7 @@ skipif mysql # not compatible
 query I rowsort label-6985
 SELECT ALL - CASE - COUNT ( * ) WHEN - COUNT ( * ) + + 57 THEN 91 ELSE 81 - - NULLIF ( 56 + COALESCE ( - COUNT ( * ), 13 / - AVG ( ALL - 31 * ( - 17 ) ) ), - 59 / 33 ) / - CAST ( + 86 * 16 + + 81 * - 96 AS INTEGER ) END / 7
 ----
--11
+-12
 
 query I rowsort
 SELECT + + 50 + + 49 AS col1
@@ -69108,7 +69108,7 @@ skipif mysql # not compatible
 query I rowsort label-7440
 SELECT ALL + NULLIF ( + COALESCE ( + 76, - AVG ( 39 ) ), - COUNT ( * ) + - + 9 ) / + + 96 col1
 ----
-0
+1
 
 query I rowsort
 SELECT 56 * + - 10 AS col1
@@ -93055,4 +93055,3 @@ query I rowsort label-9999
 SELECT + MIN ( DISTINCT - - 6 ) * + 94 + 98 + 83 * + 28 col0
 ----
 2986
-

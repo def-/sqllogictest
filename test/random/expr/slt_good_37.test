@@ -15061,7 +15061,7 @@ skipif mysql # not compatible
 query I rowsort label-1657
 SELECT ALL + 69 - - - 93 - - 93 / + - COALESCE ( + COALESCE ( + 34, - - 21 ), COUNT ( * ) * + AVG ( - - 99 ) * + 28 + - 19 ) AS col0
 ----
--26
+-27
 
 query I rowsort
 SELECT ALL ( - 91 )
@@ -30835,7 +30835,7 @@ skipif mysql # not compatible
 query I rowsort label-3344
 SELECT + + 53 / - ( COALESCE ( 93, - AVG ( + ( - 36 ) ) ) )
 ----
-0
+-1
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-3345
@@ -60512,7 +60512,7 @@ skipif mysql # not compatible
 query I rowsort label-6585
 SELECT 17 * - + 75 + 85 / - COALESCE ( - - 98, + COALESCE ( 87, - 63 + + AVG ( 31 ) ), 64, - 93 + 61 ) AS col0
 ----
--1275
+-1276
 
 onlyif mysql # aggregate syntax: 
 query II rowsort label-6586
@@ -92332,4 +92332,3 @@ query I rowsort label-9999
 SELECT ALL + 44 + 62 * SUM ( ALL + 60 ) AS col2
 ----
 3764
-
