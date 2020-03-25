@@ -23151,7 +23151,7 @@ skipif mysql # not compatible
 query I rowsort label-2476
 SELECT DISTINCT - 49 / + + CASE + + 42 WHEN 28 * + - ( - ( + CAST ( + - 11 AS REAL ) ) ) / + 78 THEN COUNT ( * ) + + AVG ( DISTINCT - CASE + - 57 WHEN - + 8 THEN NULL ELSE - 51 END ) + 9 ELSE 65 END * + 36 AS col2
 ----
-0
+-27
 
 onlyif mysql # aggregate syntax: 
 query II rowsort label-2477
@@ -39834,7 +39834,7 @@ skipif mysql # not compatible
 query I rowsort label-4258
 SELECT DISTINCT + COALESCE ( - - COUNT ( DISTINCT - 29 ), - 2 * MIN ( + 33 ) + - AVG ( ALL - - 48 ), + + ( - NULLIF ( - - 81, + - 66 ) ) ) / - NULLIF ( + 40, + CAST ( NULL AS INTEGER ) ) * - ( - 73 ) col0
 ----
-0
+-2
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-4259

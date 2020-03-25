@@ -43038,10 +43038,8 @@ SELECT ALL + 21 * - COALESCE ( - 33, - 4 / - - 42 - + - 68 + - - 40, 29 ) - 90 +
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-4565
+query error division by zero
 SELECT ALL + 21 * - COALESCE ( - 33, - 4 / - - 42 - + - 68 + - - 40, 29 ) - 90 + - + 11 + - + 19 / + 0 * CAST ( NULL AS INTEGER )
-----
-NULL
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-4566
@@ -64910,10 +64908,8 @@ SELECT + 74 / - 0 * + + ( 10 ) * - 96 * ( CASE 69 WHEN + 60 + + 5 * - 51 THEN 43
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-6902
+query error division by zero
 SELECT + 74 / - 0 * + + ( 10 ) * - 96 * ( CASE 69 WHEN + 60 + + 5 * - 51 THEN 43 * - - 91 + - - ( - ( 20 ) ) * + - CAST ( NULL AS INTEGER ) + + + 20 END )
-----
-NULL
 
 query I rowsort
 SELECT + 57 * - - 82 AS col1

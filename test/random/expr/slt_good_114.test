@@ -80374,10 +80374,8 @@ SELECT ALL 42 / - 0 * - + CAST( NULL AS SIGNED ) - + COUNT( * ) + - 1 / + 88 * +
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-8609
+query error division by zero
 SELECT ALL 42 / - 0 * - + CAST ( NULL AS INTEGER ) - + COUNT ( * ) + - 1 / + 88 * + 95 * + 3 - - - 26 * 49 / + COUNT ( * )
-----
-NULL
 
 query I rowsort
 SELECT DISTINCT - 85 * + 99 AS col0

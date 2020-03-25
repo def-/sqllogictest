@@ -28522,10 +28522,8 @@ SELECT ALL COUNT( * ) / - - CAST( NULL AS SIGNED ) + - 62 / - 0 * - + COUNT( * )
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-3076
+query error division by zero
 SELECT ALL COUNT ( * ) / - - CAST ( NULL AS INTEGER ) + - 62 / - 0 * - + COUNT ( * ) * - + CAST ( NULL AS INTEGER ) * + - ( - COUNT ( * ) ) / + 49 * + - 71 - 5
-----
-NULL
 
 onlyif mysql # aggregate syntax: 
 query II rowsort label-3077

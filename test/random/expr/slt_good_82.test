@@ -20859,7 +20859,7 @@ skipif mysql # not compatible
 query I rowsort label-2238
 SELECT COUNT ( * ) / - COALESCE ( + 93, - AVG ( DISTINCT + 55 ) ) * 31 * - 97 - - + 60 col1
 ----
-60
+92
 
 query I rowsort
 SELECT + COALESCE ( ( - 34 ), 85 ) col2

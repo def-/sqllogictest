@@ -50467,10 +50467,8 @@ SELECT + 43 + + 57 - + 32 / - 0 * - CAST( NULL AS DECIMAL ) AS col1
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-5397
+query error division by zero
 SELECT + 43 + + 57 - + 32 / - 0 * - CAST ( NULL AS REAL ) AS col1
-----
-NULL
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query I rowsort label-5398
@@ -55354,7 +55352,7 @@ skipif mysql # not compatible
 query I rowsort label-5925
 SELECT - - 42 - + 38 / - COALESCE ( - + 98, NULLIF ( + AVG ( - 73 ), + 71 - - + 50 * + - ( - - CAST ( NULL AS INTEGER ) ) - 75 ) ) * + 44 + + ( + 30 ) AS col1
 ----
-72
+55
 
 onlyif mysql # aggregate syntax: 
 query II rowsort label-5926

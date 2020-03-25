@@ -67735,10 +67735,8 @@ SELECT 96 / + 0 * + CAST( NULL AS SIGNED )
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-7294
+query error division by zero
 SELECT 96 / + 0 * + CAST ( NULL AS INTEGER )
-----
-NULL
 
 onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: 
 query I rowsort label-7295
@@ -82611,10 +82609,8 @@ SELECT + CASE CAST( NULL AS SIGNED ) WHEN + + 75 + - + SUM( ALL - + 6 ) THEN NUL
 -2162
 
 skipif mysql # not compatible
-query I rowsort label-8893
+query error division by zero
 SELECT + CASE CAST ( NULL AS INTEGER ) WHEN + + 75 + - + SUM ( ALL - + 6 ) THEN NULL WHEN + 62 / + + 0 + + CASE - MAX ( + - 51 ) WHEN + - COUNT ( * ) + 7 + - 60 THEN NULL WHEN - CASE - 99 WHEN + + COUNT ( * ) THEN CASE - + NULLIF ( + NULLIF ( + 91, + 80 ), + - 81 * + 86 ) WHEN + 14 * + - COUNT ( * ) THEN - 87 + + 88 END - - 41 - - 51 - 95 + + 46 * 34 - - - 83 * COUNT ( * ) / - 93 WHEN 30 THEN 77 END / 35 THEN CAST ( NULL AS INTEGER ) END * - 26 THEN NULL ELSE 45 + COUNT ( * ) END * - 47 AS col2
-----
--2162
 
 onlyif mysql # aggregate syntax: 
 query II rowsort label-8894

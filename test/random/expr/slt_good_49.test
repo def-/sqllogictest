@@ -34925,10 +34925,8 @@ SELECT ALL 64 / + - 0 * + CAST( NULL AS SIGNED ) AS col2
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-3793
+query error division by zero
 SELECT ALL 64 / + - 0 * + CAST ( NULL AS INTEGER ) AS col2
-----
-NULL
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-3794

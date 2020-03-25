@@ -82241,10 +82241,8 @@ SELECT DISTINCT + 20 + + - 39 - + ( + SUM( 5 ) ) + CAST( + 25 AS SIGNED ) / + 0 
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-8985
+query error division by zero
 SELECT DISTINCT + 20 + + - 39 - + ( + SUM ( 5 ) ) + CAST ( + 25 AS INTEGER ) / + 0 * + + CAST ( NULL AS INTEGER ) / 17 * CASE - COUNT ( 89 ) WHEN MAX ( ALL NULLIF ( + + 2, - - 13 ) ) + - + 41 THEN + 6 WHEN + 43 THEN NULL ELSE NULL END
-----
-NULL
 
 onlyif mysql # aggregate syntax: 
 query II rowsort label-8986

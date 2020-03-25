@@ -21098,10 +21098,8 @@ SELECT ALL - ( 27 ) * - 92 / + + 0 / CASE + ( + 27 ) WHEN - 36 THEN NULL WHEN - 
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-2290
+query error division by zero
 SELECT ALL - ( 27 ) * - 92 / + + 0 / CASE + ( + 27 ) WHEN - 36 THEN NULL WHEN - NULLIF ( - COUNT ( + 36 ), - 78 ) THEN + 46 ELSE NULL END * + 53 + - - 8
-----
-NULL
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-2291

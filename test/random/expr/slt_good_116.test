@@ -60262,10 +60262,8 @@ SELECT ALL - 23 / 19 / - 0 / ( - 13 ) * ( - MIN( + CAST( NULL AS SIGNED ) ) ) + 
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-6411
+query error division by zero
 SELECT ALL - 23 / 19 / - 0 / ( - 13 ) * ( - MIN ( + CAST ( NULL AS INTEGER ) ) ) + - ( - + 1 )
-----
-NULL
 
 onlyif mysql # DIV for integer division: 
 query I rowsort label-6412

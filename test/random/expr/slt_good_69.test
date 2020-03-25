@@ -2623,10 +2623,8 @@ SELECT - 65 * - 31 / + 0 / + 33 / + CASE WHEN ( 55 > NULL ) THEN + 32 END - 22 +
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-276
+query error division by zero
 SELECT - 65 * - 31 / + 0 / + 33 / + CASE WHEN ( 55 > NULL ) THEN + 32 END - 22 + CAST ( NULL AS REAL )
-----
-NULL
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-277

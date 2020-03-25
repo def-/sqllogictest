@@ -55075,7 +55075,7 @@ skipif mysql # not compatible
 query I rowsort label-5861
 SELECT 95 * + NULLIF ( - - 67, + 89 + + + 82 * + 59 - + COUNT ( * ) ) * + 23 + + 21 + + 45 - COALESCE ( - CAST ( 73 AS INTEGER ), 14 * - + 40, 31 + + - AVG ( - 15 ) ) / - 92 * + 19
 ----
-146461
+146446
 
 onlyif mysql # DIV for integer division: 
 query I rowsort label-5862
@@ -59129,10 +59129,8 @@ SELECT ALL + 89 / - 0 * + 85 * - 56 * + + CASE ( + - 29 ) WHEN - - 44 THEN - + 9
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-6298
+query error division by zero
 SELECT ALL + 89 / - 0 * + 85 * - 56 * + + CASE ( + - 29 ) WHEN - - 44 THEN - + 99 WHEN - 94 THEN MAX ( DISTINCT - - 87 ) END + 14 AS col1
-----
-NULL
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-6299

@@ -77294,7 +77294,7 @@ skipif mysql # not compatible
 query I rowsort label-8307
 SELECT COALESCE ( - 20, - - 70 * + 37 * + CAST ( NULL AS INTEGER ) / + - AVG ( ( - - 3 ) ) + 2 ) / - MAX ( + + 83 ) * - 33 + - 79 * - 34 AS col1
 ----
-2686
+2679
 
 query I rowsort
 SELECT 81 * + + 41

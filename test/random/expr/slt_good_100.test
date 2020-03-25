@@ -82554,10 +82554,8 @@ SELECT ALL - 94 * COALESCE ( - + 65, + 60 ) + 3 AS col1
 ----
 6113
 
-query I rowsort
+query error division by zero
 SELECT ALL - 29 * + 42 - + + 30 / - - 0 / CASE + 46 WHEN - 96 + - + 73 THEN NULL WHEN 94 THEN - NULLIF ( 37, 90 ) END - - 97
-----
-NULL
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-8767

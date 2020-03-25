@@ -77840,14 +77840,6 @@ SELECT DISTINCT + 31 + + NULLIF ( - CAST( NULL AS DECIMAL ), - + 93 + - 22 / CAS
 ----
 NULL
 
-skipif mysql # not compatible
-skipif postgresql # division by zero
-query I rowsort label-8627
-SELECT DISTINCT + 31 + + NULLIF ( - CAST ( NULL AS REAL ), - + 93 + - 22 / CASE COUNT ( * ) WHEN - NULLIF ( + 11, - 22 * 52 + 20 / + COALESCE ( - COALESCE ( 0, - 31 / 65 ), - 8 ) ) THEN - COUNT ( * ) ELSE NULL END ) AS col1
-----
-NULL
-
-onlyif postgresql
 query error division by zero
 SELECT DISTINCT + 31 + + NULLIF ( - CAST ( NULL AS REAL ), - + 93 + - 22 / CASE COUNT ( * ) WHEN - NULLIF ( + 11, - 22 * 52 + 20 / + COALESCE ( - COALESCE ( 0, - 31 / 65 ), - 8 ) ) THEN - COUNT ( * ) ELSE NULL END ) AS col1
 

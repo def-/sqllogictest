@@ -15844,10 +15844,8 @@ SELECT 57 * - - 12 * + + 83 + - 74 + - + CASE + ( COUNT( * ) ) WHEN + 60 THEN + 
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-1670
+query error division by zero
 SELECT 57 * - - 12 * + + 83 + - 74 + - + CASE + ( COUNT ( * ) ) WHEN + 60 THEN + CAST ( NULL AS INTEGER ) ELSE NULL END + COUNT ( ALL - 4 + 61 / 0 ) * 29 * 28
-----
-NULL
 
 query I rowsort
 SELECT ALL - NULLIF ( - 26, - + 85 )
