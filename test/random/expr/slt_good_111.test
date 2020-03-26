@@ -20261,10 +20261,8 @@ SELECT ALL 56 * 97 - SUM( - 51 ) + NULLIF ( + - 36, + + CAST( NULL AS SIGNED ) )
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-2186
+query error division by zero
 SELECT ALL 56 * 97 - SUM ( - 51 ) + NULLIF ( + - 36, + + CAST ( NULL AS INTEGER ) ) * + - 91 / - 0 * - 45 * - 10 * - CAST ( NULL AS INTEGER ) * - - 85
-----
-NULL
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-2187
