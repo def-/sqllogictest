@@ -14321,7 +14321,7 @@ skipif mysql # not compatible
 query I rowsort label-1653
 SELECT DISTINCT - CASE CAST ( - 91 AS INTEGER ) WHEN + COUNT ( * ) THEN NULL WHEN + 31 - + COALESCE ( + CAST ( - 3 AS INTEGER ), - + 66 ) THEN - + AVG ( DISTINCT + 72 ) ELSE - COUNT ( * ) END * 58 * + + ( COUNT ( * ) ) / - 61 * + - 33 * + 65 - - 65 AS col0
 ----
-1996
+2105
 
 query I rowsort
 SELECT 86 * - + 7 col1

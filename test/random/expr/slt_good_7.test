@@ -64830,7 +64830,7 @@ skipif mysql # not compatible
 query I rowsort label-6940
 SELECT ALL + 32 / - - COALESCE ( 43, + + 81 * + + CASE 75 WHEN - - 1 + 94 - + - ( + 0 ) THEN - 34 ELSE NULL END * + AVG ( DISTINCT 69 ) - MIN ( + CAST ( 41 AS INTEGER ) ), 63 * 29 ) * - 28
 ----
--20
+-21
 
 query I rowsort
 SELECT 11 * - 51 AS col2

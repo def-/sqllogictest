@@ -55511,7 +55511,7 @@ skipif mysql # not compatible
 query I rowsort label-6057
 SELECT ALL + 48 + + 70 - + 82 / COALESCE ( + NULLIF ( CASE - 53 WHEN + 33 + 61 THEN + - 72 * + AVG ( DISTINCT 5 ) + 43 * 78 END, - + 10 + 77 * + COUNT ( * ) ), - 41 + ( + 15 ) + - MIN ( - ( 23 ) ) * + 45 + - - 40 ) * + ( 29 ) + + + COALESCE ( + COUNT ( * ), - COUNT ( ALL - + 68 ) ) AS col0
 ----
-119
+117
 
 query I rowsort
 SELECT ALL ( + - 9 ) + 90

@@ -89132,7 +89132,7 @@ skipif mysql # not compatible
 query I rowsort label-9525
 SELECT DISTINCT 26 * CAST ( + AVG ( DISTINCT + 91 ) / MAX ( 84 - - 93 ) + 44 AS INTEGER ) + - 3
 ----
-1141
+1167
 
 query I rowsort
 SELECT DISTINCT + - 56 * 21 AS col0

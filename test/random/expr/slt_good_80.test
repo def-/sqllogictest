@@ -37285,7 +37285,7 @@ SELECT ALL - MAX( 61 ) AS col0, - 24 * + + 13 * + 98 * - 52 * - 56 * - - 87 * + 
 -91
 
 skipif mysql # not compatible
-query III rowsort label-3986
+query error numeric field overflow
 SELECT ALL - MAX ( 61 ) AS col0, - 24 * + + 13 * + 98 * - 52 * - 56 * - - 87 * + + 23 * - 0, - + 97 + - 96 / - 14 AS col0
 ----
 -61

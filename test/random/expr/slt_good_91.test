@@ -29144,7 +29144,7 @@ skipif mysql # not compatible
 query I rowsort label-3090
 SELECT + COUNT ( * ) * COUNT ( * ) * + - COALESCE ( + - SUM ( + - 19 ), - + MIN ( + 69 ) ) - + 35 + 70 + NULLIF ( + + 67, - - 13 / - + COUNT ( * ) + + 46 ) + - 21 + + 86 / CASE + 16 WHEN 67 THEN 24 ELSE - 99 / + - 5 + COALESCE ( - 26, - ( + CAST ( NULL AS INTEGER ) ) * 17 + + - 91 + + - 28, + AVG ( CAST ( NULL AS INTEGER ) ) + + 64 + + 25 * - 41 ) * 34 END * - 87
 ----
-62
+71
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-3091
@@ -31227,7 +31227,7 @@ SELECT CASE - + 38 WHEN + COUNT( * ) * COUNT( * ) + - CAST( NULL AS DECIMAL ) * 
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-3313
+query error numeric field overflow
 SELECT CASE - + 38 WHEN + COUNT ( * ) * COUNT ( * ) + - CAST ( NULL AS REAL ) * - - 81 THEN NULL WHEN - + NULLIF ( + CASE - - 23 WHEN + - 38 THEN + COUNT ( * ) + - 9 END, + 70 + + CAST ( MIN ( DISTINCT + 83 ) AS INTEGER ) + - 81 * + - 27 * - 32 * - 83 * 57 * - 87 ) / 32 - + 27 THEN 54 + + 55 END
 ----
 NULL

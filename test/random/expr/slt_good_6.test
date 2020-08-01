@@ -63062,7 +63062,7 @@ query II rowsort label-6703
 SELECT DISTINCT + 54 AS col0, CASE SUM ( ALL + 2 ) WHEN 29 * - 34 THEN 61 * - 24 - + - 0 ELSE - - CAST ( - - COALESCE ( + + CAST ( NULL AS INTEGER ), + 82 / - + 42 + + 92 - - 60 - - 96 / - - AVG ( DISTINCT 97 ), - 78, + 85 + - ( + 83 ) + - MAX ( DISTINCT 63 ) ) AS INTEGER ) END AS col2
 ----
 54
-151
+152
 
 query I rowsort
 SELECT DISTINCT + ( - + 98 ) col0

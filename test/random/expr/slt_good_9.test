@@ -61572,7 +61572,7 @@ skipif mysql # not compatible
 query I rowsort label-6591
 SELECT ALL NULLIF ( 38, + 23 * + ( + 46 ) ) + + COUNT ( * ) - + COUNT ( DISTINCT + + 0 ) + + - 57 + + - 48 / - + COALESCE ( 85, - AVG ( + 53 ) ) * + 4 * + 44 / 22
 ----
--15
+-14
 
 query I rowsort
 SELECT 1 + 70

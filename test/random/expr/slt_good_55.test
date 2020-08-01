@@ -20389,7 +20389,7 @@ SELECT ALL + NULLIF ( - COUNT( * ), + 47 * - 93 * MAX( 45 ) * - 63 * - 56 DIV - 
 -50
 
 skipif mysql # not compatible
-query I rowsort label-2188
+query error numeric field overflow
 SELECT ALL + NULLIF ( - COUNT ( * ), + 47 * - 93 * MAX ( 45 ) * - 63 * - 56 / - 14 * + 53 + + 56 ) + + - COALESCE ( ( + 49 ), 42 / 45 )
 ----
 -50

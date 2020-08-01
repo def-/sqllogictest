@@ -60167,7 +60167,7 @@ skipif mysql # not compatible
 query I rowsort label-6566
 SELECT DISTINCT COALESCE ( - 32, + + 47, + - ( AVG ( + 8 ) ) * + 16 ) / + CAST ( - 33 AS INTEGER ) * - 15 AS col0
 ----
--14
+-15
 
 onlyif mysql # aggregate syntax: 
 query II rowsort label-6567

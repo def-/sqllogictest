@@ -73180,7 +73180,7 @@ SELECT - 99 + - CAST( NULL AS SIGNED ) - 38 * - 58 * + ( + - 87 ) * - 80 * - 99 
 NULL
 
 skipif mysql # not compatible
-query I rowsort label-7769
+query error numeric field overflow
 SELECT - 99 + - CAST ( NULL AS INTEGER ) - 38 * - 58 * + ( + - 87 ) * - 80 * - 99 / - 22 * + 80
 ----
 NULL
