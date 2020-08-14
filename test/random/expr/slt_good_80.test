@@ -90172,7 +90172,7 @@ skipif mysql # not compatible
 query I rowsort label-9661
 SELECT ( COALESCE ( ( + 56 ), + - 35 * ( - 40 ) * + AVG ( - - 85 ) - 66, + + CAST ( NULL AS INTEGER ) * + 44 / + + 24 ) ) / 47 - 32 col1
 ----
--31
+-30
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-9662

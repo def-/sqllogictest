@@ -68787,7 +68787,7 @@ skipif mysql # not compatible
 query I rowsort label-7365
 SELECT - 13 * 31 * + - 85 + + 34 + - CASE - 70 WHEN - 5 THEN + AVG ( + ( - - 92 ) ) + 26 + 26 * + ( + 79 * CAST ( CASE - COUNT ( * ) WHEN - COUNT ( * ) THEN - 92 * + 28 WHEN COUNT ( * ) THEN NULL END AS INTEGER ) ) ELSE + COUNT ( * ) END * + 65 / 16 col2
 ----
-34285
+34284
 
 query II rowsort
 SELECT - 79 * + 7, + 83 + + + 67 AS col0

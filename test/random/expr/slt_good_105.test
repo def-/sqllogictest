@@ -142,7 +142,7 @@ skipif mysql # not compatible
 query I rowsort label-10
 SELECT DISTINCT - 24 / + COALESCE ( 39, - NULLIF ( + 22, + + 45 ) / - CASE + 46 WHEN + NULLIF ( - 77, - MAX ( - 13 ) / + ( - - 6 ) + CAST ( NULL AS INTEGER ) ) THEN NULL WHEN 24 THEN NULL ELSE - 85 + AVG ( 22 ) + + MIN ( ALL - - 5 ) END * - - 0 * - 98 - + 78 ) AS col0
 ----
--1
+0
 
 onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: 
 query II rowsort label-11

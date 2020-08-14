@@ -42368,7 +42368,7 @@ skipif mysql # not compatible
 query I rowsort label-4507
 SELECT - 16 / - COALESCE ( 63, - + AVG ( DISTINCT 35 ) - - - 85 ) + - 85 col1
 ----
--85
+-84
 
 query I rowsort
 SELECT + - 0 * - 18
@@ -52388,7 +52388,7 @@ skipif mysql # not compatible
 query I rowsort label-5562
 SELECT DISTINCT + 73 * NULLIF ( + COALESCE ( + 30, + AVG ( ALL 20 ) ), - - 6 ) / 38 - - SUM ( + 31 ) - 41 AS col0
 ----
-48
+47
 
 query I rowsort
 SELECT ( - + 76 )

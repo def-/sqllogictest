@@ -77383,7 +77383,7 @@ skipif mysql # not compatible
 query I rowsort label-8240
 SELECT + COALESCE ( - 21, - AVG ( ALL 93 ) * - 26 + 4 * - 70, 8 * 99 + COUNT ( * ) - 84 ) / - 2 + - 99
 ----
--89
+-88
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query II rowsort label-8241

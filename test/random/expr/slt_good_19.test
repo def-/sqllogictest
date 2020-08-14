@@ -56718,7 +56718,7 @@ skipif mysql # not compatible
 query I rowsort label-6049
 SELECT - 23 / + COALESCE ( + + 79, + 4, - 75 + - AVG ( + 40 ) + - 48 + + 5 ) + 62
 ----
-62
+61
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-6050

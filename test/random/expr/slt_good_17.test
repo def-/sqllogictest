@@ -23388,7 +23388,7 @@ skipif mysql # not compatible
 query I rowsort label-2479
 SELECT COUNT ( * ) / ( + 33 ) / - 79 * + 12 * + - 97 - - 15 + + - 50 / + COALESCE ( + 28, AVG ( + 13 ) * - 60 ) + - ( 56 ) + 11
 ----
--32
+-31
 
 query I rowsort
 SELECT DISTINCT + 97 * - 37

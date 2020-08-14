@@ -30284,7 +30284,7 @@ skipif mysql # not compatible
 query I rowsort label-3241
 SELECT DISTINCT - 84 + + + CASE COUNT ( * ) WHEN 48 THEN + 44 * AVG ( DISTINCT 76 ) ELSE 20 * + - 50 END / 88 + 47 * 31
 ----
-1362
+1361
 
 query I rowsort
 SELECT + 5 - - + 6 - + 39 * - + 86 + 33 * + - 57 AS col1

@@ -57535,7 +57535,7 @@ skipif mysql # not compatible
 query I rowsort label-6105
 SELECT - COALESCE ( + + COALESCE ( - 51, - - AVG ( ALL 85 ), 7 * + - 36 * 39 ), + NULLIF ( + 73, 71 + + 41 ) ) / + ( 92 ) + - COALESCE ( - 16, + 61 )
 ----
-17
+16
 
 query I rowsort
 SELECT + 75 + + - 1

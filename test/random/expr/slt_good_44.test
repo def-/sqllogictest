@@ -32665,7 +32665,7 @@ skipif mysql # not compatible
 query I rowsort label-3550
 SELECT DISTINCT CASE + + 84 WHEN 9 THEN + MAX ( ALL - - 9 ) * - 88 + AVG ( + + 49 ) ELSE 73 * + 63 END / + 6 / + COALESCE ( + - COUNT ( * ), + COUNT ( ALL - + 34 ) ) - + 54 * - 96 + - + 21 + 82 * + - 24 col1
 ----
-2429
+2428
 
 query I rowsort
 SELECT ALL 81 * - 54

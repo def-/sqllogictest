@@ -60683,7 +60683,7 @@ skipif mysql # not compatible
 query I rowsort label-6499
 SELECT DISTINCT + COALESCE ( - COALESCE ( - 65, + 3 * + CAST ( NULL AS INTEGER ) ), - AVG ( - + 67 ) ) / - NULLIF ( - COALESCE ( + - 12, + 57 ), + + 84 ) + - - 46
 ----
-41
+40
 
 query I rowsort
 SELECT + 71 * + 52
@@ -79493,7 +79493,7 @@ query II rowsort label-8519
 SELECT ALL 9 AS col2, - COUNT ( * ) * + - COALESCE ( NULLIF ( + 40, + COUNT ( * ) * - 81 ), 92 - - 36 * 56, 81 - - AVG ( + 54 ) ) / CASE WHEN - 54 IS NOT NULL THEN + 26 + 3 END - 84
 ----
 9
--83
+-82
 
 query I rowsort
 SELECT - - 75 * - 84 AS col1

@@ -74852,7 +74852,7 @@ skipif mysql # not compatible
 query I rowsort label-8107
 SELECT + COALESCE ( 30, 99 * + CAST ( - + 58 AS INTEGER ) / + - 69 / + 9 * 19 + NULLIF ( AVG ( + - 74 ), + ( - 22 ) + - + 53 ) + + 23 * + 89 * - 8 + - + 32, 20 - - COUNT ( * ) - + - 77 ) / - ( 65 ) + 37
 ----
-37
+36
 
 onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: DECIMAL type: 
 query I rowsort label-8108

@@ -41896,7 +41896,7 @@ skipif mysql # not compatible
 query I rowsort label-4447
 SELECT DISTINCT COALESCE ( COUNT ( * ), - + COALESCE ( - AVG ( ALL + 36 ), + - 26 + + ( - 5 ) ) ) / + - NULLIF ( 92, 88 * - COUNT ( * ) + + AVG ( DISTINCT - 93 ) ) + ( 47 ) + + 96 AS col2
 ----
-143
+142
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-4448

@@ -54410,7 +54410,7 @@ skipif mysql # not compatible
 query I rowsort label-5789
 SELECT - - 79 - - ( - NULLIF ( - 18, + 96 ) ) / COALESCE ( + 42, + 8 / COUNT ( 79 ) * 46 + 53, ( + 36 ), - AVG ( - 86 ) * 8 ) * - COUNT ( * ) + - 17
 ----
-62
+61
 
 query I rowsort
 SELECT ALL + NULLIF ( 3, + 55 * + 82 - + 14 * - 45 ) + + 49 * - 85

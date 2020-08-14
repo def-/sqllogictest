@@ -70216,7 +70216,7 @@ skipif mysql # not compatible
 query I rowsort label-7517
 SELECT ALL + 62 / 60 - + MAX ( DISTINCT - 95 ) - + 57 + 42 * - - 1 / - COALESCE ( - 66, - 34, CAST ( NULL AS INTEGER ) + + + CAST ( NULL AS INTEGER ) * - 36 * + - 82 * + 75 * - 0 * + - CASE - + 45 WHEN CAST ( + COUNT ( * ) AS INTEGER ) THEN 74 + + - 80 + - 26 * + 66 * - + AVG ( DISTINCT - - 69 ) + - + 69 * + - 90 WHEN - - COUNT ( * ) THEN NULL WHEN - - COUNT ( + - 11 ) + 4 THEN - ( - - 75 ) END ) + - - 73 * NULLIF ( 58, + + ( - + 33 ) )
 ----
-4274
+4273
 
 query I rowsort
 SELECT ALL - - CASE + CASE 73 WHEN COALESCE ( - - 43, - 94, 15 ) THEN + + 98 ELSE NULL END WHEN 65 + - - 52 THEN NULL ELSE - 82 END

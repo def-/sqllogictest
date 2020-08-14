@@ -74014,7 +74014,7 @@ skipif mysql # not compatible
 query I rowsort label-8011
 SELECT + COALESCE ( 29, + - COALESCE ( + + COUNT ( * ), + 22 + + - AVG ( + NULLIF ( 48, + 40 ) ) ) * - - 67 + + 25 + 64 * 75, ( + 39 ) * ( 24 ) ) / + 19
 ----
-2
+1
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-8012

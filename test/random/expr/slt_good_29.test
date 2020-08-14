@@ -11723,7 +11723,7 @@ skipif mysql # not compatible
 query I rowsort label-1447
 SELECT DISTINCT - CASE CAST ( - 91 AS INTEGER ) WHEN + COUNT ( * ) THEN NULL WHEN + 31 - + COALESCE ( + CAST ( - 3 AS INTEGER ), - + 66 ) THEN - + AVG ( DISTINCT + 72 ) ELSE - COUNT ( * ) END * 58 * + + ( COUNT ( * ) ) / - 61 * + - 33 * + 65 - - 65 AS col0
 ----
-2105
+2104
 
 query I rowsort
 SELECT 86 * - + 7 col1
@@ -48101,7 +48101,7 @@ skipif mysql # not compatible
 query I rowsort label-5843
 SELECT + COALESCE ( + 59, - AVG ( - 39 ) ) / - 51 - - + 43 AS col2
 ----
-42
+41
 
 onlyif mysql # DIV for integer division: 
 query I rowsort label-5844

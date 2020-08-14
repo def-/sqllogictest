@@ -51703,7 +51703,7 @@ skipif mysql # not compatible
 query I rowsort label-5536
 SELECT - CASE 94 WHEN - 77 - + + CASE + ( - 10 ) WHEN - MIN ( - 48 ) THEN NULL WHEN + 52 THEN + 1 + 87 END THEN AVG ( ALL - + 56 ) / - 73 WHEN 86 * - + 3 / 64 THEN NULL ELSE + + 89 END / - 5
 ----
-18
+17
 
 query I rowsort
 SELECT 37 * 45 + - 45

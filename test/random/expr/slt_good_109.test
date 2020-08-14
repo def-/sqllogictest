@@ -45437,7 +45437,7 @@ skipif mysql # not compatible
 query I rowsort label-5003
 SELECT ALL 14 / - CASE - 60 WHEN + 58 THEN - AVG ( DISTINCT + + 51 ) ELSE 29 END + + 23 AS col1
 ----
-23
+22
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-5004
@@ -87913,7 +87913,7 @@ skipif mysql # not compatible
 query I rowsort label-9669
 SELECT - MAX ( ALL + 37 ) + + 27 * COUNT ( * ) / + COALESCE ( + 26, - AVG ( ALL + - 51 ) ) AS col1
 ----
--36
+-35
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-9670

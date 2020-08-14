@@ -12422,7 +12422,7 @@ skipif mysql # not compatible
 query I rowsort label-1365
 SELECT ALL 86 * - 80 - COALESCE ( - CASE + COUNT ( * ) WHEN - 25 THEN 92 * - CASE 17 WHEN + 89 + + COALESCE ( - COUNT ( * ) + - COUNT ( * ) / + NULLIF ( COUNT ( * ) * - 52, - 5 - + 52 * 4 ), - 81 ) THEN NULL WHEN 53 * + 26 THEN + COUNT ( * ) ELSE 95 * ( + 90 ) END WHEN ( - 13 ) * - 70 THEN 71 + + ( 17 - ( CASE 80 WHEN 73 THEN + 70 + + ( AVG ( COALESCE ( + 37, - 65, - 66 ) ) ) * + 49 END ) ) END + - 52 * + 94, 94 + 63 ) / - 2
 ----
--6802
+-6801
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-1366
@@ -38042,7 +38042,7 @@ skipif mysql # not compatible
 query I rowsort label-4116
 SELECT ALL - COUNT ( * ) / COALESCE ( 16, + AVG ( + 93 ), - + COUNT ( * ) ) + 27 col1
 ----
-27
+26
 
 query I rowsort
 SELECT + - ( ( - 42 ) )
@@ -52344,7 +52344,7 @@ skipif mysql # not compatible
 query I rowsort label-5639
 SELECT - CASE + CAST ( NULL AS INTEGER ) WHEN + MIN ( ALL + CAST ( - CASE + 48 WHEN + + 37 THEN NULL ELSE 98 END AS INTEGER ) ) THEN NULL ELSE 95 + + - COUNT ( * ) END * - ( + SUM ( ALL - - 57 ) ) + - ( - - COUNT ( * ) ) + + ( - 98 ) / + + CASE - 68 WHEN - 97 THEN NULL WHEN 60 THEN - + AVG ( 69 ) + - - CAST ( NULL AS INTEGER ) + - 64 + + 68 * + 22 / + 28 ELSE 27 + 51 END * + COUNT ( * )
 ----
-5356
+5355
 
 query II rowsort
 SELECT 63 AS col1, - 60 + - - 62 AS col2
