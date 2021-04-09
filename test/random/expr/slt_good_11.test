@@ -1170,8 +1170,6 @@ SELECT ALL + 35 + + + 33 * + COALESCE ( + NULLIF ( + ( + SUM( DISTINCT + - ( + 9
 skipif mysql # not compatible
 query error numeric field overflow
 SELECT ALL + 35 + + + 33 * + COALESCE ( + NULLIF ( + ( + SUM ( DISTINCT + - ( + 93 ) ) ), 74 * - - 69 * + 26 * + 40 + - MIN ( DISTINCT + ( 58 ) ) ), - + 75 + + - COALESCE ( - 53, - - 51, + 97 ) * 77 * 9 * - 83 * + ( 93 ) * + + 43 * + - CAST ( NULL AS INTEGER ) + + 38 + COUNT ( * ) ) col0
-----
--3034
 
 query I rowsort
 SELECT - NULLIF ( 18, - + 0 )
@@ -83671,7 +83669,7 @@ SELECT - COALESCE ( CAST( NULL AS SIGNED ), 17 DIV 31 + + - COUNT( * ), - 23 * +
 1
 
 skipif mysql # not compatible
-query error numeric field overflow
+query I rowsort
 SELECT - COALESCE ( CAST ( NULL AS INTEGER ), 17 / 31 + + - COUNT ( * ), - 23 * + 63 * - 63 * 21 * 49 * + 7 * 5, + ( 65 ) * 16 )
 ----
 1

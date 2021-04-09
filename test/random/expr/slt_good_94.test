@@ -85750,10 +85750,10 @@ SELECT ALL 44 * COALESCE ( + 6, 5 + + - 61, - COALESCE ( - + 1, + 78 * - - 4 * -
 316902
 
 skipif mysql # not compatible
-query error numeric field overflow
+query I rowsort label-9244
 SELECT ALL 44 * COALESCE ( + 6, 5 + + - 61, - COALESCE ( - + 1, + 78 * - - 4 * - AVG ( NULLIF ( + 78, - - 85 * 17 + - + 64 ) ) - - MIN ( + + 36 ) ) ) / 68 * 18 - + - 84 * + - 92 * - 41 + - + 0
 ----
-316916
+316917
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query II rowsort label-9245

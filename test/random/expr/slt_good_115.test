@@ -92588,9 +92588,6 @@ SELECT DISTINCT - 27 + 0 + 47 - - 3, - 72 * + + 23 * - - NULLIF ( ( 36 ), 23 * +
 skipif mysql # not compatible
 query error numeric field overflow
 SELECT DISTINCT - 27 + 0 + 47 - - 3, - 72 * + + 23 * - - NULLIF ( ( 36 ), 23 * + MIN ( - 66 ) * - 84 * 58 * 48 * - - 61 / - ( 58 ) ) * COUNT ( * ) + + 95 + + COUNT ( DISTINCT + 42 ) col1
-----
-23
--59520
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-9896
