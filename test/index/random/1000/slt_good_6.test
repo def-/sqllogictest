@@ -53124,7 +53124,7 @@ SELECT ALL + - CAST( NULL AS SIGNED ) + + col3 FROM tab0 AS cor0 WHERE col3 * + 
 ----
 
 skipif mysql # not compatible
-query error numeric field overflow
+query I rowsort label-8980
 SELECT ALL + - CAST ( NULL AS INTEGER ) + + col3 FROM tab0 AS cor0 WHERE col3 * + col0 * + - CAST ( col1 AS INTEGER ) * col4 + - + col4 IS NULL
 ----
 
@@ -53134,7 +53134,7 @@ SELECT ALL + - CAST( NULL AS SIGNED ) + + col3 FROM tab1 AS cor0 WHERE col3 * + 
 ----
 
 skipif mysql # not compatible
-query error numeric field overflow
+query I rowsort label-8980
 SELECT ALL + - CAST ( NULL AS INTEGER ) + + col3 FROM tab1 AS cor0 WHERE col3 * + col0 * + - CAST ( col1 AS INTEGER ) * col4 + - + col4 IS NULL
 ----
 
@@ -53144,7 +53144,7 @@ SELECT ALL + - CAST( NULL AS SIGNED ) + + col3 FROM tab2 AS cor0 WHERE col3 * + 
 ----
 
 skipif mysql # not compatible
-query error numeric field overflow
+query I rowsort label-8980
 SELECT ALL + - CAST ( NULL AS INTEGER ) + + col3 FROM tab2 AS cor0 WHERE col3 * + col0 * + - CAST ( col1 AS INTEGER ) * col4 + - + col4 IS NULL
 ----
 
@@ -53154,7 +53154,7 @@ SELECT ALL + - CAST( NULL AS SIGNED ) + + col3 FROM tab3 AS cor0 WHERE col3 * + 
 ----
 
 skipif mysql # not compatible
-query error numeric field overflow
+query I rowsort label-8980
 SELECT ALL + - CAST ( NULL AS INTEGER ) + + col3 FROM tab3 AS cor0 WHERE col3 * + col0 * + - CAST ( col1 AS INTEGER ) * col4 + - + col4 IS NULL
 ----
 
@@ -53164,7 +53164,7 @@ SELECT ALL + - CAST( NULL AS SIGNED ) + + col3 FROM tab4 AS cor0 WHERE col3 * + 
 ----
 
 skipif mysql # not compatible
-query error numeric field overflow
+query I rowsort label-8980
 SELECT ALL + - CAST ( NULL AS INTEGER ) + + col3 FROM tab4 AS cor0 WHERE col3 * + col0 * + - CAST ( col1 AS INTEGER ) * col4 + - + col4 IS NULL
 ----
 
