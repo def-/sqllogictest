@@ -93,6 +93,9 @@ CREATE UNIQUE INDEX idx_tab4_3 ON tab4 (col3 DESC,col0 DESC)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query I rowsort label-0
 SELECT pk FROM tab0 WHERE col1 >= 78.93 AND ((((col1 > 47.20 AND col3 >= 43 OR col0 > 44 OR col1 >= 47.73) OR ((col0 > 58)) AND col3 IS NULL AND col1 > 74.73 OR ((col3 BETWEEN 81 AND 92)) OR ((col0 <= 60 AND col0 < 90 OR col0 >= 56 AND col1 < 90.89 AND col1 < 16.45 OR col3 > 3)) OR col1 > 24.86 AND ((((col4 <= 80.9 OR col0 < 45) OR col3 > 62 AND (col0 >= 97 AND ((col0 > 91 AND col3 < 70 OR col0 >= 93 AND col4 >= 55.55) AND ((col1 <= 32.79))) AND col4 IS NULL) AND col1 < 86.27)) OR (col4 > 54.65)) OR col0 IN (95,91) OR (col4 > 96.8 AND col0 > 97 AND col0 = 36) AND col0 < 43 AND col3 >= 85 OR ((col3 > 38 AND col0 >= 68)) OR ((col1 > 63.72 AND (col0 < 82) OR (col4 BETWEEN 66.96 AND 85.15) OR col0 IN (54,0,50,36,7,58)) OR (col0 <= 42 AND col1 IS NULL) OR (((col3 = 87 OR col1 >= 94.52)) AND col1 > 30.66 AND (col3 > 13)))) AND ((col3 > 86))) AND (col1 <= 78.7 AND col3 < 29 AND ((((col3 > 98 OR col0 IS NULL)) AND col0 BETWEEN 17 AND 85) AND col0 >= 4 OR col3 IS NULL AND (col1 BETWEEN 54.1 AND 99.56 AND (col4 = 44.82 OR col3 = 18 OR col1 < 78.66) OR col0 > 88) OR col1 > 30.79 AND (col3 > 54) AND col0 = 73 OR ((((col0 < 32)) AND col0 > 26)) AND col4 > 99.33 OR ((col3 > 31 AND col0 > 84 AND (col3 < 91 OR (col0 >= 1 AND col4 >= 6.17 AND col0 >= 77) OR col3 >= 39 AND col4 > 91.1) AND col0 >= 83 AND col0 < 87 AND ((col3 = 25 AND col4 > 57.71 OR (col1 < 99.72 OR col0 > 65 OR col0 > 77))))) OR col3 >= 53 AND col0 = 74))) AND col0 < 50
 ----

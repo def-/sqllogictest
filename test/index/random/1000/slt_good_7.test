@@ -3066,6 +3066,9 @@ CREATE INDEX idx_tab4_1 ON tab4 (col1 DESC)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query IIIIIII rowsort label-0
 SELECT * FROM tab0 AS cor0 WHERE NOT ( NOT ( 76 * 54 - + col3 ) IS NULL )
 ----

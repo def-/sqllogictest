@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query II rowsort label-0
 SELECT ALL - 28 + - 30 * - + COUNT( * ) AS col2, + 59 DIV - COUNT( * ) AS col0
@@ -17658,11 +17661,17 @@ SELECT 95 / CASE + MIN( DISTINCT - - 3 ) WHEN - 74 * + - 77 * + 71 * + 93 * + - 
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error numeric field overflow
 SELECT 95 / CASE + MIN ( DISTINCT - - 3 ) WHEN - 74 * + - 77 * + 71 * + 93 * + - ( - 82 ) / + + 21 + - 2 THEN 64 / 75 WHEN MIN ( DISTINCT + 16 ) THEN NULL ELSE NULL END
 ----
 NULL
+
+statement ok
+BEGIN
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-1858

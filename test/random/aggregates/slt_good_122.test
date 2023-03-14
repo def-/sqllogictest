@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: 
 query I rowsort label-0
 SELECT ALL - SUM( - col0 ) col0 FROM tab0 AS cor0 WHERE CAST( NULL AS SIGNED ) <> CAST( NULL AS SIGNED ) * CAST( - 66 AS SIGNED )

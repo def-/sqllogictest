@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT DISTINCT + + 21 * + 38
 ----
@@ -1167,9 +1170,15 @@ SELECT ALL + 35 + + + 33 * + COALESCE ( + NULLIF ( + ( + SUM( DISTINCT + - ( + 9
 ----
 -3034
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error numeric field overflow
 SELECT ALL + 35 + + + 33 * + COALESCE ( + NULLIF ( + ( + SUM ( DISTINCT + - ( + 93 ) ) ), 74 * - - 69 * + 26 * + 40 + - MIN ( DISTINCT + ( 58 ) ) ), - + 75 + + - COALESCE ( - 53, - - 51, + 97 ) * 77 * 9 * - 83 * + ( 93 ) * + + 43 * + - CAST ( NULL AS INTEGER ) + + 38 + COUNT ( * ) ) col0
+
+statement ok
+BEGIN
 
 query I rowsort
 SELECT - NULLIF ( 18, - + 0 )

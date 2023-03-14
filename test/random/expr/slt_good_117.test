@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # aggregate syntax: 
 query I rowsort label-0
 SELECT ALL ( - + 30 ) * + - MAX( ALL - 16 )
@@ -8105,9 +8108,15 @@ SELECT ALL 53 AS col2, CASE - 55 WHEN - CAST( NULL AS DECIMAL ) + - 10 THEN NULL
 53
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT ALL 53 AS col2, CASE - 55 WHEN - CAST ( NULL AS REAL ) + - 10 THEN NULL WHEN - + CAST ( + 95 AS INTEGER ) * - MIN ( DISTINCT - + 45 ) + + NULLIF ( COUNT ( * ), + 47 + - - 32 * - ( 33 ) + ( + 34 ) * + 14 ) + + + 68 - - 65 * - 73 * - 6 * + 6 + - NULLIF ( - 72, + + 97 ) THEN + CASE - 97 WHEN + - CASE + 86 WHEN - + 87 THEN + + 91 END THEN + - 31 + + 64 + + COALESCE ( 72, - 54 + + COALESCE ( - 63 - 91, - 83, - 78 * - ( 43 ) ) * 73 ) + + 20 * MAX ( + 38 + + 83 ) * + 70 END + - 3 * 60 ELSE NULL END * COUNT ( - 90 + 47 / + 0 )
+
+statement ok
+BEGIN
 
 query I rowsort
 SELECT - + ( - - 11 )

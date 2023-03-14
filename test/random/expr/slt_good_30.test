@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT ALL ( + 49 )
 ----
@@ -59669,9 +59672,15 @@ NULL
 39
 -6
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error numeric field overflow
 SELECT + - NULLIF ( CAST ( NULL AS REAL ), - - ( + 87 ) + 95 ) + - - COUNT ( * ) * - + 85 AS col1, - CAST ( - SUM ( DISTINCT + 79 ) AS INTEGER ) + - + CASE - - 4 WHEN + - NULLIF ( + 75, 13 ) + - 98 + - + 96 * - 52 + 87 * + ( - 92 ) * + 34 * 5 * - ( 29 ) * + 92 * + - 81 / NULLIF ( - CASE + 4 WHEN + + 88 THEN + 87 ELSE + CAST ( + + 90 AS REAL ) + 54 END, + - 35 - - + 70 ) + + 89 * + 92 + + + AVG ( DISTINCT - 11 ) THEN NULL ELSE 40 END, - 6 AS col1
+
+statement ok
+BEGIN
 
 onlyif mysql # CAST syntax: DECIMAL type: 
 query I rowsort label-6914
@@ -80676,11 +80685,17 @@ SELECT + 41 + - 61 + - ( + + 35 ) + + 83 - 35 - + + CAST( 55 AS SIGNED ) * + - 7
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error numeric field overflow
 SELECT + 41 + - 61 + - ( + + 35 ) + + 83 - 35 - + + CAST ( 55 AS INTEGER ) * + - 70 * - 75 * - 20 * - CASE - 11 WHEN SUM ( ALL - 35 ) * - CASE - ( - 83 ) WHEN 40 THEN + 72 + 2 END THEN NULL ELSE - 73 * 52 END * + CASE 59 WHEN 92 + AVG ( 19 ) THEN 36 / - 77 + + 90 * 96 END
 ----
 NULL
+
+statement ok
+BEGIN
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query I rowsort label-9312

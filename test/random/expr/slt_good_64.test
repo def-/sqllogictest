@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 query II rowsort
 SELECT + 76 AS col2, 76 AS col1
 ----
@@ -50466,9 +50469,15 @@ SELECT + 43 + + 57 - + 32 / - 0 * - CAST( NULL AS DECIMAL ) AS col1
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT + 43 + + 57 - + 32 / - 0 * - CAST ( NULL AS REAL ) AS col1
+
+statement ok
+BEGIN
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query I rowsort label-5398

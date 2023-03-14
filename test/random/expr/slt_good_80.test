@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT + 94 * + 15 AS col1
 ----
@@ -37284,9 +37287,15 @@ SELECT ALL - MAX( 61 ) AS col0, - 24 * + + 13 * + 98 * - 52 * - 56 * - - 87 * + 
 0
 -91
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error numeric field overflow
 SELECT ALL - MAX ( 61 ) AS col0, - 24 * + + 13 * + 98 * - 52 * - 56 * - - 87 * + + 23 * - 0, - + 97 + - 96 / - 14 AS col0
+
+statement ok
+BEGIN
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-3987

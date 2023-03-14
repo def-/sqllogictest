@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(79,17,38)
 statement ok
 INSERT INTO tab2 VALUES(78,59,26)
 
+statement ok
+BEGIN
+
 query III rowsort
 SELECT ALL * FROM tab2 WHERE NOT NULL BETWEEN tab2.col0 + - col0 AND ( + col1 )
 ----

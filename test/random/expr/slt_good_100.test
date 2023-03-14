@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT ALL + 37 * + - 96 * + 13 + 6 * 75
 ----
@@ -82554,8 +82557,14 @@ SELECT ALL - 94 * COALESCE ( - + 65, + 60 ) + 3 AS col1
 ----
 6113
 
+statement ok
+COMMIT
+
 query error division by zero
 SELECT ALL - 29 * + 42 - + + 30 / - - 0 / CASE + 46 WHEN - 96 + - + 73 THEN NULL WHEN 94 THEN - NULLIF ( 37, 90 ) END - - 97
+
+statement ok
+BEGIN
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-8767

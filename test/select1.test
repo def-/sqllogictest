@@ -91,6 +91,9 @@ INSERT INTO t1(e,c,b,a,d) VALUES(242,244,240,243,241)
 statement ok
 INSERT INTO t1(e,d,c,b,a) VALUES(246,248,247,249,245)
 
+statement ok
+BEGIN
+
 query I nosort
 SELECT CASE WHEN c>(SELECT avg(c) FROM t1) THEN a*2 ELSE b*10 END
   FROM t1
@@ -12185,4 +12188,3 @@ SELECT c
  ORDER BY 1
 ----
 29 values hashing to 20a327dd7dddd406aa915b0ee3795434
-

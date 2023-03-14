@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # aggregate syntax: 
 query I rowsort label-0
 SELECT + SUM( - NULLIF ( + - 19, + 64 ) ) col0
@@ -2001,9 +2004,15 @@ SELECT ALL CASE - 6 WHEN + 70 + ( 81 ) THEN NULL WHEN COALESCE ( - 22, - + COALE
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT ALL CASE - 6 WHEN + 70 + ( 81 ) THEN NULL WHEN COALESCE ( - 22, - + COALESCE ( - 64, + 65 / 49 + - + 62, - - NULLIF ( + 57, COUNT ( ALL - CASE 58 WHEN + 17 - 80 THEN 72 * - 40 + 54 * + 58 WHEN - CAST ( NULL AS INTEGER ) THEN NULL WHEN - 59 + 45 / + COALESCE ( 54 / 88, CAST ( NULL AS INTEGER ) * - 22 + - 58 * + 98 ) THEN - 18 / 20 ELSE NULL END ) * 3 ) ) * - MAX ( DISTINCT + 46 * - 27 ), AVG ( ALL 22 ) ) THEN NULL WHEN 23 THEN 42 - + MAX ( 52 ) END
+
+statement ok
+BEGIN
 
 onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: 
 query I rowsort label-198
@@ -15841,9 +15850,15 @@ SELECT 57 * - - 12 * + + 83 + - 74 + - + CASE + ( COUNT( * ) ) WHEN + 60 THEN + 
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT 57 * - - 12 * + + 83 + - 74 + - + CASE + ( COUNT ( * ) ) WHEN + 60 THEN + CAST ( NULL AS INTEGER ) ELSE NULL END + COUNT ( ALL - 4 + 61 / 0 ) * 29 * 28
+
+statement ok
+BEGIN
 
 query I rowsort
 SELECT ALL - NULLIF ( - 26, - + 85 )

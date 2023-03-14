@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 query III rowsort
 SELECT * FROM tab0 WHERE col2 / + col0 <> NULL
 ----

@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # aggregate syntax: 
 query I rowsort label-0
 SELECT - COUNT( * ) + + 32
@@ -55192,9 +55195,15 @@ SELECT DISTINCT ( + + 88 ) + 69 + - - 22 / - + 0 * - 93 * CASE - CASE ( - COUNT(
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT DISTINCT ( + + 88 ) + 69 + - - 22 / - + 0 * - 93 * CASE - CASE ( - COUNT ( * ) ) WHEN - 77 * - 44 - COUNT ( * ) + + 99 THEN - MIN ( - 30 ) WHEN - 30 THEN NULL WHEN + ( + 80 ) + + 33 / + COALESCE ( - - 93, - MAX ( DISTINCT 58 ) ) + - 99 * + 90 THEN - + COUNT ( * ) - AVG ( DISTINCT - 74 ) / 10 ELSE NULL END WHEN 16 THEN 3 END * + 78
+
+statement ok
+BEGIN
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-5864

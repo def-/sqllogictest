@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT DISTINCT - ( + 81 ) AS col0
 ----
@@ -68157,11 +68160,17 @@ SELECT DISTINCT - 96 * + 47 * ( + - 98 ) * + - 98 * 33 * + 9 * CASE MIN( - 85 ) 
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error numeric field overflow
 SELECT DISTINCT - 96 * + 47 * ( + - 98 ) * + - 98 * 33 * + 9 * CASE MIN ( - 85 ) WHEN - + 96 * - COUNT ( * ) + 81 + + COUNT ( * ) * - 37 THEN - 69 * 58 WHEN + COALESCE ( + 16, 36 * + 30 ) THEN NULL END * - + CAST ( - + 95 AS INTEGER ) * - 33
 ----
 NULL
+
+statement ok
+BEGIN
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-7217

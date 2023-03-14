@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(91,59,79)
 statement ok
 INSERT INTO tab2 VALUES(92,41,58)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT ALL + + col1 FROM tab0 cor0 GROUP BY col1 HAVING NULL IS NOT NULL
 ----

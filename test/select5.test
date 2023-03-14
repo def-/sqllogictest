@@ -2366,6 +2366,9 @@ INSERT INTO t64 VALUES(9,8,'table t64 row 9')
 statement ok
 INSERT INTO t64 VALUES(10,3,'table t64 row 10')
 
+statement ok
+BEGIN
+
 query TTTT valuesort join-4-1
 SELECT x29,x31,x51,x55
   FROM t51,t29,t31,t55

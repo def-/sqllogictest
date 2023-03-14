@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query I rowsort label-0
 SELECT ALL - SUM( DISTINCT - - ( + 95 ) ) * 73 DIV + - SUM( DISTINCT + 58 ) AS col0 FROM tab0

@@ -99,6 +99,9 @@ CREATE UNIQUE INDEX idx_tab4_4 ON tab4 (col3 DESC)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query I rowsort label-0
 SELECT pk FROM tab0 WHERE (col0 >= 93) AND (((col1 >= 55.99 OR (col3 <= 1) OR (((col3 >= 24))) AND col3 IN (84,92,96,26) OR ((col3 >= 53)) AND (col4 >= 6.22) AND (col0 >= 33 OR (((((col0 >= 6)) AND ((col3 < 27 AND (((col0 > 78))))) OR col1 > 90.47 OR col3 IN (79,47) AND col1 > 57.55 OR ((col1 < 77.85)) OR (col3 = 36 OR col0 < 90) AND col3 <= 44))) OR col1 IN (62.81,85.85,44.58,30.98,34.53) OR col3 IS NULL) AND (col3 IN (52,58,51,90,6,37) OR (col3 >= 55)))) AND ((col1 = 46.0 OR col3 <= 24)) AND ((((col0 < 75)) AND col4 >= 77.95)) OR (col0 < 40) OR ((((((col3 IS NULL))) OR (col3 > 61) AND col3 > 30)) OR col1 < 11.20) AND col1 >= 17.42 AND col0 >= 96 OR col3 > 47 OR (((col3 BETWEEN 4 AND 79) AND col3 >= 51)))
 ----

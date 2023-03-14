@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(79,17,38)
 statement ok
 INSERT INTO tab2 VALUES(78,59,26)
 
+statement ok
+BEGIN
+
 onlyif mysql # use DIV operator for integer division
 query I rowsort label-0
 SELECT DISTINCT - col0 + + CAST( 60 AS SIGNED ) DIV + col0 AS col0 FROM tab1

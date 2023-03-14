@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # aggregate syntax: 
 query II rowsort label-0
 SELECT - CASE - - 15 WHEN + 7 * + + 51 + 14 * + + COUNT( - 34 ) THEN + - 46 END + + + 21 AS col2, 46 AS col1

@@ -84,6 +84,9 @@ CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col3 DESC)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query I valuesort label-0
 SELECT pk FROM tab0 WHERE (((((((col0 = 760) OR (col1 IS NULL) OR ((col3 < 689) OR (col0 BETWEEN 904 AND 557 AND col3 > 608 AND (col3 < 683 AND (col1 IS NULL)))) AND col0 > 942 OR (col0 <= 423) OR col3 < 914 AND (col3 > 960) AND col3 >= 620 OR col3 >= 316 OR col0 = 578 AND col0 > 632 OR col3 >= 174 AND col3 > 765 OR col4 < 550.49 OR col0 > 93))) AND col0 > 279) AND col0 < 488 AND (col4 = 299.14) AND col1 < 432.81 OR col0 > 610 OR (((col0 <= 993))))) ORDER BY 1 DESC
 ----

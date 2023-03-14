@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # aggregate syntax: 
 query I rowsort label-0
 SELECT 94 - - MIN( ALL - 6 ) AS col0
@@ -3981,9 +3984,15 @@ SELECT DISTINCT 78 / - COALESCE ( 0, - + ( 73 ) + + CAST( NULL AS SIGNED ) ) * 9
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT DISTINCT 78 / - COALESCE ( 0, - + ( 73 ) + + CAST ( NULL AS INTEGER ) ) * 91 * - CAST ( NULL AS INTEGER ) * - ( - 62 ) AS col2
+
+statement ok
+BEGIN
 
 onlyif mysql # DIV for integer division: 
 query I rowsort label-411

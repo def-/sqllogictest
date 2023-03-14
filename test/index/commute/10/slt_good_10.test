@@ -96,6 +96,9 @@ CREATE INDEX idx_tab4_2 ON tab4 (col4)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query I rowsort label-0
 SELECT pk FROM tab0 WHERE col1 IN (SELECT col4 FROM tab0 WHERE ((col0 > 57) AND (((col3 >= 46) OR col0 = 19)) OR col3 < 42)) OR col4 <= 49.74 OR col3 = 26 AND col4 < 5.90
 ----

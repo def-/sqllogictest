@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT ALL - 18 * + COALESCE ( - + 48, - ( - 69 ) + ( 77 ), + 68 ) + + 51 AS col2
 ----
@@ -72784,9 +72787,15 @@ SELECT ALL ( + 73 ) + - + 92 * - 97 + COALESCE ( + ( + NULLIF ( + 75, - MIN( ALL
 ----
 -16384
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT ALL ( + 73 ) + - + 92 * - 97 + COALESCE ( + ( + NULLIF ( + 75, - MIN ( ALL + + 53 ) ) ), + ( - CASE - - 73 WHEN COALESCE ( - + 51, - 26 ) / + 0 THEN COUNT ( * ) * 14 END ), + COUNT ( * ) / + 3, + COUNT ( ALL 73 ) ) + - 86 * ( 8 ) * + 37 AS col1
+
+statement ok
+BEGIN
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-7783

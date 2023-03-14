@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT DISTINCT ( NULLIF ( - + 42, + 19 ) )
 ----
@@ -31226,11 +31229,17 @@ SELECT CASE - + 38 WHEN + COUNT( * ) * COUNT( * ) + - CAST( NULL AS DECIMAL ) * 
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error numeric field overflow
 SELECT CASE - + 38 WHEN + COUNT ( * ) * COUNT ( * ) + - CAST ( NULL AS REAL ) * - - 81 THEN NULL WHEN - + NULLIF ( + CASE - - 23 WHEN + - 38 THEN + COUNT ( * ) + - 9 END, + 70 + + CAST ( MIN ( DISTINCT + 83 ) AS INTEGER ) + - 81 * + - 27 * - 32 * - 83 * 57 * - 87 ) / 32 - + 27 THEN 54 + + 55 END
 ----
 NULL
+
+statement ok
+BEGIN
 
 query I rowsort
 SELECT - 81 + - - 60 AS col0

@@ -93,6 +93,9 @@ CREATE INDEX idx_tab4_5 ON tab4 (col1)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-0
 SELECT DISTINCT + CAST( NULL AS SIGNED ) col5 FROM tab0 WHERE ( NOT ( NULL ) < NULL )

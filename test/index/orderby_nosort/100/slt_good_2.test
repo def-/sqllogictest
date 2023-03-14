@@ -366,6 +366,9 @@ CREATE UNIQUE INDEX idx_tab4_5 ON tab4 (col1 DESC,col3)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query I nosort label-0-1-desc
 SELECT pk FROM tab0 WHERE col3 IN (86,692,805,23) ORDER BY 1 DESC
 ----

@@ -3063,6 +3063,9 @@ CREATE INDEX idx_tab4_4 ON tab4 (col3 DESC)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query IIIIIII rowsort label-0
 SELECT * FROM tab0 WHERE NOT - col4 IS NOT NULL
 ----

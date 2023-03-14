@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT 99 - + 29
 ----
@@ -21457,9 +21460,15 @@ SELECT ALL - MIN( + ( - + ( - 84 ) ) ) + + + 65 - - 80 / - 0 * + 30 * - CAST( NU
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT ALL - MIN ( + ( - + ( - 84 ) ) ) + + + 65 - - 80 / - 0 * + 30 * - CAST ( NULL AS REAL ) AS col1
+
+statement ok
+BEGIN
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-2302
@@ -77859,9 +77868,15 @@ SELECT COALESCE ( + MIN( ALL - 42 ), + 11 DIV + 0, + 62 ) AS col1
 ----
 -42
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error
 SELECT COALESCE ( + MIN ( ALL - 42 ), + 11 / + 0, + 62 ) AS col1
+
+statement ok
+BEGIN
 
 onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: 
 query I rowsort label-8330

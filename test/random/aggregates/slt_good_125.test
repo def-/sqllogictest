@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT - 96 AS col2 FROM tab2 WHERE NOT - col1 + - col2 NOT IN ( + 68 )
 ----

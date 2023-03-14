@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(79,17,38)
 statement ok
 INSERT INTO tab2 VALUES(78,59,26)
 
+statement ok
+BEGIN
+
 onlyif mysql # support for MySQL specific system types and syntax
 query I rowsort label-0
 SELECT DISTINCT + col0 * - CAST( NULL AS DECIMAL ) FROM tab1 AS cor0

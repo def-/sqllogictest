@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # CAST syntax: SIGNED type: DIV for integer division: 
 query I rowsort label-0
 SELECT 20 DIV - - 96 + CAST( 90 AS SIGNED ) AS col2
@@ -77840,8 +77843,14 @@ SELECT DISTINCT + 31 + + NULLIF ( - CAST( NULL AS DECIMAL ), - + 93 + - 22 / CAS
 ----
 NULL
 
+statement ok
+COMMIT
+
 query error division by zero
 SELECT DISTINCT + 31 + + NULLIF ( - CAST ( NULL AS REAL ), - + 93 + - 22 / CASE COUNT ( * ) WHEN - NULLIF ( + 11, - 22 * 52 + 20 / + COALESCE ( - COALESCE ( 0, - 31 / 65 ), - 8 ) ) THEN - COUNT ( * ) ELSE NULL END ) AS col1
+
+statement ok
+BEGIN
 
 onlyif mysql # DIV for integer division: 
 query I rowsort label-8628

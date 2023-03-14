@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(91,59,79)
 statement ok
 INSERT INTO tab2 VALUES(92,41,58)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT ALL 81 AS col1 FROM tab0 AS cor0 GROUP BY cor0.col0
 ----

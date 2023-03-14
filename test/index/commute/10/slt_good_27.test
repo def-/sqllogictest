@@ -99,6 +99,9 @@ CREATE INDEX idx_tab4_3 ON tab4 (col1 DESC,col3)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query I rowsort label-0
 SELECT pk FROM tab0 WHERE col3 = 95 AND col4 IN (21.82,53.46,78.57,40.98,70.62) AND col3 < 70
 ----

@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(91,59,79)
 statement ok
 INSERT INTO tab2 VALUES(92,41,58)
 
+statement ok
+BEGIN
+
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query I rowsort
 SELECT DISTINCT CASE + col2 WHEN 61 THEN NULL ELSE + col2 * - + 95 * + 29 END col1 FROM tab2 GROUP BY col2 HAVING NOT ( NULL ) > NULL

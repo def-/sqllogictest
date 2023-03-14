@@ -3063,6 +3063,9 @@ CREATE INDEX idx_tab4_4 ON tab4 (col1,col3)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query I rowsort label-0
 SELECT pk FROM tab0 WHERE col0 > 5727
 ----

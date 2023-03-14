@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: DECIMAL type: 
 query I rowsort label-0
 SELECT + CASE - 20 WHEN NULLIF ( + - 51, - CAST( 45 AS DECIMAL ) + - 92 * + COUNT( * ) ) * + + 76 THEN NULL WHEN - 92 * - 61 THEN + ( - 83 ) * + CAST( NULL AS SIGNED ) WHEN 75 / COUNT( * ) + + 56 / 49 THEN - 41 ELSE NULL END / + 32 + ( + COUNT( * ) )

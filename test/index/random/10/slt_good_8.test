@@ -96,6 +96,9 @@ CREATE UNIQUE INDEX idx_tab4_3 ON tab4 (col0)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 onlyif mysql # CAST syntax: SIGNED type: 
 query IIIIIII rowsort label-0
 SELECT * FROM tab0 cor0 WHERE NOT NULL BETWEEN CAST( NULL AS SIGNED ) + - 31 AND ( NULL )

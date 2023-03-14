@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # CAST syntax: SIGNED type: 
 query II rowsort label-0
 SELECT - - 85 * - + CAST( NULL AS SIGNED ) + 47 + + 32 AS col2, 89 AS col0
@@ -73624,9 +73627,15 @@ SELECT ALL 12 / + + 0 * - MAX( + CASE - 75 WHEN ( 44 ) * - 15 - - ( - + 55 ) * 8
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT ALL 12 / + + 0 * - MAX ( + CASE - 75 WHEN ( 44 ) * - 15 - - ( - + 55 ) * 89 THEN 45 WHEN 67 THEN NULL ELSE NULL END ) + 39 * - 69 AS col2
+
+statement ok
+BEGIN
 
 query II rowsort
 SELECT ( 70 ), + 72 AS col1

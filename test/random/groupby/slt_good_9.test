@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(91,59,79)
 statement ok
 INSERT INTO tab2 VALUES(92,41,58)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT + - col2 * + col2 FROM tab2 AS cor0 GROUP BY col2, col2
 ----

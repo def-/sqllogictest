@@ -102,6 +102,9 @@ CREATE INDEX idx_tab4_4 ON tab4 (col1 DESC)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query I valuesort label-0
 SELECT pk FROM tab0 WHERE ((col4 > 901.6) AND col0 >= 17 AND (col0 IS NULL) AND col0 < 649) AND (col3 > 960) OR (col3 > 58) ORDER BY 1 DESC
 ----

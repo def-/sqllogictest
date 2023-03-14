@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # CAST syntax: SIGNED type: DIV for integer division: 
 query I rowsort label-0
 SELECT COALESCE ( - 67, + CAST( NULL AS SIGNED ) DIV + 7 ) col2

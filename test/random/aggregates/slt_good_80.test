@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # CAST syntax: SIGNED type: 
 query II rowsort label-0
 SELECT DISTINCT + - col0 + CAST( NULL AS SIGNED ), + col2 FROM tab0 AS cor0

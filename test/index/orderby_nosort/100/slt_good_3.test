@@ -369,6 +369,9 @@ CREATE INDEX idx_tab4_5 ON tab4 (col0)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query I nosort label-0-1-desc
 SELECT pk FROM tab0 WHERE (((col1 > 602.54 AND col1 <= 570.7 AND col3 <= 13 AND (col0 > 294) OR ((((col4 IN (171.40))))) AND col0 >= 792 AND col1 < 734.97 AND (((((col1 < 328.32) OR col0 < 22)))) AND col0 >= 258 AND col4 IN (622.60,426.59) AND (((col3 <= 717)) AND (col0 IN (953) AND (((col1 > 45.71 OR col3 IN (676,27,547))))) AND col1 < 840.66 OR col3 IS NULL AND col1 > 253.99) OR col1 > 162.32 AND (col3 <= 29) AND (((col0 > 256) AND (col1 = 565.95)) OR col0 < 59 OR col4 < 649.61 AND (col3 >= 469) AND (col3 < 427) OR (col3 >= 652 AND ((col1 > 72.75)) AND col0 < 393 AND ((col0 >= 958)) OR col0 >= 157 AND col4 >= 102.51 AND col3 IN (14,539,495,901,746)))) AND col4 >= 899.30)) ORDER BY 1 DESC
 ----

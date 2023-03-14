@@ -3060,6 +3060,9 @@ CREATE UNIQUE INDEX idx_tab4_2 ON tab4 (col3)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query I nosort label-0-1-desc
 SELECT pk FROM tab0 WHERE col3 BETWEEN 2670 AND 2001 ORDER BY 1 DESC
 ----

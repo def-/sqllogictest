@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT ALL + 70 - 19 + - 68 AS col2
 ----
@@ -2622,9 +2625,15 @@ SELECT - 65 * - 31 / + 0 / + 33 / + CASE WHEN ( 55 > NULL ) THEN + 32 END - 22 +
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT - 65 * - 31 / + 0 / + 33 / + CASE WHEN ( 55 > NULL ) THEN + 32 END - 22 + CAST ( NULL AS REAL )
+
+statement ok
+BEGIN
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-277

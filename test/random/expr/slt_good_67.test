@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # DIV for integer division: 
 query II rowsort label-0
 SELECT 78, + 75 DIV + 81 + - 26 col0
@@ -1709,9 +1712,15 @@ SELECT - 4 + - 94, + CASE + + 25 WHEN - 56 + COUNT( * ) - + 5 + + 47 * - 0 DIV +
 -98
 -1829
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT - 4 + - 94, + CASE + + 25 WHEN - 56 + COUNT ( * ) - + 5 + + 47 * - 0 / + + CASE + AVG ( 34 ) WHEN - 6 * 70 + 87 * + - CAST ( NULL AS INTEGER ) THEN NULL ELSE - CAST ( 79 AS INTEGER ) END + 63 THEN NULL ELSE - ( + 31 ) * + COALESCE ( 59, 36 + + 52 ) END - 70 / - COALESCE ( - MAX ( DISTINCT 12 ) * + 51, 16 / ( - 74 * 0 ), - 56, + 87 ) col1
+
+statement ok
+BEGIN
 
 query II rowsort
 SELECT + 74 * 23 AS col1, - 44 * 12 AS col0

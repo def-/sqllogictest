@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT 6 * 49 + + 51
 ----
@@ -28521,9 +28524,15 @@ SELECT ALL COUNT( * ) / - - CAST( NULL AS SIGNED ) + - 62 / - 0 * - + COUNT( * )
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT ALL COUNT ( * ) / - - CAST ( NULL AS INTEGER ) + - 62 / - 0 * - + COUNT ( * ) * - + CAST ( NULL AS INTEGER ) * + - ( - COUNT ( * ) ) / + 49 * + - 71 - 5
+
+statement ok
+BEGIN
 
 onlyif mysql # aggregate syntax: 
 query II rowsort label-3077

@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # CAST syntax: aggregate syntax: DECIMAL type: 
 query I rowsort label-0
 SELECT ALL + 77 + - 25 + COALESCE ( 17, COUNT( * ), - NULLIF ( + 14, + - ( - 78 ) * - COUNT( * ) ) ) + CAST( NULL AS DECIMAL ) AS col2
@@ -43037,9 +43040,15 @@ SELECT ALL + 21 * - COALESCE ( - 33, - 4 / - - 42 - + - 68 + - - 40, 29 ) - 90 +
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT ALL + 21 * - COALESCE ( - 33, - 4 / - - 42 - + - 68 + - - 40, 29 ) - 90 + - + 11 + - + 19 / + 0 * CAST ( NULL AS INTEGER )
+
+statement ok
+BEGIN
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-4566
@@ -64907,9 +64916,15 @@ SELECT + 74 / - 0 * + + ( 10 ) * - 96 * ( CASE 69 WHEN + 60 + + 5 * - 51 THEN 43
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT + 74 / - 0 * + + ( 10 ) * - 96 * ( CASE 69 WHEN + 60 + + 5 * - 51 THEN 43 * - - 91 + - - ( - ( 20 ) ) * + - CAST ( NULL AS INTEGER ) + + + 20 END )
+
+statement ok
+BEGIN
 
 query I rowsort
 SELECT + 57 * - - 82 AS col1

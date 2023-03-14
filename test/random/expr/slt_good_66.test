@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # DIV for integer division: 
 query I rowsort label-0
 SELECT 80 DIV + 92
@@ -73179,11 +73182,17 @@ SELECT - 99 + - CAST( NULL AS SIGNED ) - 38 * - 58 * + ( + - 87 ) * - 80 * - 99 
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error numeric field overflow
 SELECT - 99 + - CAST ( NULL AS INTEGER ) - 38 * - 58 * + ( + - 87 ) * - 80 * - 99 / - 22 * + 80
 ----
 NULL
+
+statement ok
+BEGIN
 
 query I rowsort
 SELECT - ( + ( + + 32 ) ) AS col0

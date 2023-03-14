@@ -93,6 +93,9 @@ INSERT INTO t1(e,c,b,a,d) VALUES(NULL,244,240,243,NULL)
 statement ok
 INSERT INTO t1(e,d,c,b,a) VALUES(246,248,247,249,245)
 
+statement ok
+BEGIN
+
 query I rowsort
 SELECT CASE WHEN c>(SELECT avg(c) FROM t1) THEN a*2 ELSE b*10 END
   FROM t1
@@ -11215,4 +11218,3 @@ SELECT a+b*2+c*3
     OR a IS NULL
 ----
 16 values hashing to 393ec0319f60a4bcad062e8ed256490f
-

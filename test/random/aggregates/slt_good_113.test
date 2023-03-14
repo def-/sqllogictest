@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query I rowsort
 SELECT 28 - + col0 col0 FROM tab2

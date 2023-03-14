@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-0
 SELECT NULLIF ( - 57, + 90 * + 2 / - + NULLIF ( - - 62, 42 ) + + 13 - + + 51 / - 7 + - - 59 + - + 78 + - COALESCE ( 17, + + 89 * - CAST( NULL AS SIGNED ) / + 77 * 49, 15 ) ) AS col1
@@ -82240,9 +82243,15 @@ SELECT DISTINCT + 20 + + - 39 - + ( + SUM( 5 ) ) + CAST( + 25 AS SIGNED ) / + 0 
 ----
 NULL
 
+statement ok
+COMMIT
+
 skipif mysql # not compatible
 query error division by zero
 SELECT DISTINCT + 20 + + - 39 - + ( + SUM ( 5 ) ) + CAST ( + 25 AS INTEGER ) / + 0 * + + CAST ( NULL AS INTEGER ) / 17 * CASE - COUNT ( 89 ) WHEN MAX ( ALL NULLIF ( + + 2, - - 13 ) ) + - + 41 THEN + 6 WHEN + 43 THEN NULL ELSE NULL END
+
+statement ok
+BEGIN
 
 onlyif mysql # aggregate syntax: 
 query II rowsort label-8986

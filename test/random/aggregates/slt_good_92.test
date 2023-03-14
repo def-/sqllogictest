@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 query II rowsort
 SELECT col0 AS col1, + col2 * - col2 AS col1 FROM tab1 WHERE ( NOT NULL IS NULL )
 ----

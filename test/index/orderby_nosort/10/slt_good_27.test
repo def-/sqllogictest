@@ -93,6 +93,9 @@ CREATE INDEX idx_tab4_3 ON tab4 (col4)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query I nosort label-0-1-desc
 SELECT pk FROM tab0 WHERE col0 > 90 OR col3 <= 78 OR col3 < 12 ORDER BY 1 DESC
 ----

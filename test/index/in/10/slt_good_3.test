@@ -96,6 +96,9 @@ CREATE UNIQUE INDEX idx_tab4_5 ON tab4 (col0 DESC)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query I rowsort label-0
 SELECT pk FROM tab0 WHERE col1 IN (72.87,27.1,87.50,54.71,85.53,90.29) AND col3 >= 88 AND col3 >= 88 AND col0 IN (50,69,18,13,81,40)
 ----

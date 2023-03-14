@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: 
 query I rowsort label-0
 SELECT + CASE 68 WHEN - 34 * - - COUNT( DISTINCT + - 96 ) THEN MIN( ALL - ( ( - 14 ) ) ) ELSE + - COUNT( * ) + - 89 * - + CAST( NULL AS SIGNED ) * + + 20 END * + 87 / 5 / + 43 + - + 57 * 61 * 64

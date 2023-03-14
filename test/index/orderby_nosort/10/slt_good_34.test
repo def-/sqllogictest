@@ -96,6 +96,9 @@ CREATE INDEX idx_tab4_1 ON tab4 (col1 DESC)
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
 
+statement ok
+BEGIN
+
 query I nosort label-0-1-desc
 SELECT pk FROM tab0 WHERE (((((col0 = 45) AND (col3 > 47) AND (col0 IS NULL))))) ORDER BY 1 DESC
 ----

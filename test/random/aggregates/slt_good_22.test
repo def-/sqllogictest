@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # CAST syntax: SIGNED type: DIV for integer division: 
 query I rowsort label-0
 SELECT ALL - - 18 DIV CAST( + - 87 AS SIGNED ) FROM tab1 AS cor0 CROSS JOIN tab0 AS cor1

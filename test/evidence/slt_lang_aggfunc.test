@@ -18,6 +18,9 @@ CREATE INDEX t1i1 ON t1(x)
 skipif sqlite
 halt
 
+statement ok
+BEGIN
+
 # count(x), avg(x), sum(x), total(x), min(x), max(x)
 # group_concat(x), group_concat(x,y)
 

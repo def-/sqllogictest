@@ -36,6 +36,9 @@ INSERT INTO tab2 VALUES(75,67,58)
 statement ok
 INSERT INTO tab2 VALUES(46,51,23)
 
+statement ok
+BEGIN
+
 onlyif mysql # aggregate syntax: 
 query II rowsort label-0
 SELECT - 61 * - COALESCE ( + SUM( ALL + 30 ), - 8 ) + - ( 34 ) AS col0, + 38
