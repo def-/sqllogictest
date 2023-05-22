@@ -1,3 +1,9 @@
+simple conn=mz_system,user=mz_system
+ALTER SYSTEM SET enable_table_keys = true
+----
+COMPLETE 0
+
+
 hash-threshold 8
 
 statement ok

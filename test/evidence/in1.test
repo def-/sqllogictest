@@ -8,6 +8,11 @@ halt
 onlyif oracle
 halt
 
+simple conn=mz_system,user=mz_system
+ALTER SYSTEM SET enable_table_keys = true
+----
+COMPLETE 0
+
 # EVIDENCE-OF: R-52275-55503 When the right operand is an empty set, the
 # result of IN is false and the result of NOT IN is true, regardless of
 # the left operand and even if the left operand is NULL.
